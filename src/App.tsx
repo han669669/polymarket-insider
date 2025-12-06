@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef, memo } from 'react'
 import { RefreshCw, ArrowUpRight, ArrowDownRight, Clock, Zap, Sun, Moon, Check, AlertCircle } from 'lucide-react'
 import { useWhaleActivity, type WhaleAlert } from './hooks/useWhaleActivity'
+import { Analytics } from '@vercel/analytics/react'
 
 // Toast notification component
 function Toast({ message, type, onClose }: { message: string; type: 'success' | 'info' | 'warning'; onClose: () => void }) {
@@ -388,6 +389,7 @@ function App() {
           </div>
         </footer>
       </main>
+    <Analytics />
     </div>
   )
 }

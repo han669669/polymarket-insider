@@ -1,6 +1,6 @@
 # 🐋 Polymarket Insider
 
-**Whale Scanner** — Catch big money moves on Polymarket in real-time.
+**Whale Scanner** - Catch big money moves on Polymarket in real-time.
 
 > Leave it open. Watch the whales. Make smarter bets.
 
@@ -27,7 +27,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173 — done.
+Open http://localhost:5173 - done.
 
 ---
 
@@ -45,12 +45,12 @@ Open http://localhost:5173 — done.
 
 | Action | What You See |
 |--------|--------------|
-| **Check Now** — found whales | ✅ "Found X new whale trade(s)!" |
-| **Check Now** — nothing new | ℹ️ "No new trades yet" |
-| **Scan More** — found whales | ✅ "Found X more whale trade(s)" |
-| **Scan More** — hit API limit | ℹ️ "No more trades in API range" |
-| **Auto-refresh** — found whales | ✅ "X new whale(s) detected!" |
-| **Auto-refresh** — nothing new | 🔇 *Silent (no spam)* |
+| **Check Now** - found whales | ✅ "Found X new whale trade(s)!" |
+| **Check Now** - nothing new | ℹ️ "No new trades yet" |
+| **Scan More** - found whales | ✅ "Found X more whale trade(s)" |
+| **Scan More** - hit API limit | ℹ️ "No more trades in API range" |
+| **Auto-refresh** - found whales | ✅ "X new whale(s) detected!" |
+| **Auto-refresh** - nothing new | 🔇 *Silent (no spam)* |
 
 ---
 
@@ -79,7 +79,7 @@ No auth required. ~3 minute trade history available.
 
 ## License
 
-MIT — do whatever you want.
+MIT - do whatever you want.
 
 ---
 
