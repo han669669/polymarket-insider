@@ -32,7 +32,7 @@ body {
 @keyframes toast-in {
   0% {
     opacity: 0;
-    transform: translateX(-50%) translateY(-20px) scale(0.95);
+    transform: translateX(-50%) translateY(-12px) scale(0.96);
   }
   100% {
     opacity: 1;
@@ -47,14 +47,14 @@ body {
   }
   100% {
     opacity: 0;
-    transform: translateX(-50%) translateY(-10px) scale(0.95);
+    transform: translateX(-50%) translateY(-8px) scale(0.96);
   }
 }
 
 .toast-enter {
-  animation: toast-in 0.25s ease-out forwards;
+  animation: toast-in 0.2s ease-out forwards;
 }
 
 .toast-exit {
-  animation: toast-out 0.2s ease-in forwards;
+  animation: toast-out 0.15s ease-in forwards;
 }

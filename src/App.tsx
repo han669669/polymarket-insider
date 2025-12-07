@@ -29,8 +29,8 @@ function Toast({ message, type, onClose }: { message: string; type: 'success' | 
   const Icon = type === 'success' ? Check : type === 'warning' ? AlertCircle : Zap
 
   return (
-    <div className={`fixed top-20 left-1/2 z-50 ${bgColor} text-white px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 text-sm font-medium ${isExiting ? 'toast-exit' : 'toast-enter'}`}>
-      <Icon className="w-4 h-4" />
+    <div className={`fixed top-[72px] left-1/2 z-50 ${bgColor} text-white px-5 py-2.5 rounded-full shadow-lg flex items-center gap-2 text-sm font-medium whitespace-nowrap ${isExiting ? 'toast-exit' : 'toast-enter'}`}>
+      <Icon className="w-4 h-4 shrink-0" />
       {message}
     </div>
   )
@@ -254,10 +254,10 @@ function App() {
               </div>
             </div>
             
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               <button
                 onClick={toggleTheme}
-                className={`p-2.5 rounded-xl transition-colors ${
+                className={`p-2 sm:p-2.5 rounded-lg sm:rounded-xl transition-colors ${
                   isDark ? 'hover:bg-gray-800' : 'hover:bg-gray-100'
                 }`}
                 aria-label="Toggle theme"
@@ -268,14 +268,15 @@ function App() {
               <button
                 onClick={handleRefresh}
                 disabled={isRefreshing || whalesFetching}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
+                className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-medium transition-all ${
                   isDark 
                     ? 'bg-white text-black hover:bg-gray-100' 
                     : 'bg-gray-900 text-white hover:bg-gray-800'
                 } disabled:opacity-50`}
               >
-                <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
-                {isRefreshing ? 'Checking...' : 'Check Now'}
+                <RefreshCw className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${isRefreshing ? 'animate-spin' : ''}`} />
+                <span className="hidden sm:inline">{isRefreshing ? 'Checking...' : 'Check Now'}</span>
+                <span className="sm:hidden">{isRefreshing ? '...' : 'Check'}</span>
               </button>
             </div>
           </div>
